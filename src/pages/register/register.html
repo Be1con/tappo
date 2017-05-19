@@ -1,0 +1,39 @@
+<!--
+  Generated template for the Register page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+ <ion-content padding class="login5">
+  <br><br><br><br>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary"><b>Player 1</b></ion-label>
+      <ion-input placeholder="User Name"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <br><br>
+  <button ion-button style="margin:auto; display:block; width: 150px;" (click)="sequeToLimitscorePage()" secondary menuToggle ><b>ENTER</b></button><br>
+  <ion-fab bottom left >
+   <button ion-fab><ion-icon name="home"></ion-icon></button>
+   <ion-fab-list side="top">
+
+     <button ion-fab><ion-icon (click)="sequeToSettingPage()" name="settings"></ion-icon></button>
+     <button ion-fab><ion-icon (click)="sequeToRulePage()" name="help"></ion-icon></button>
+     <button ion-fab><ion-icon (click)="sequeToRankingPage()" name="ribbon"></ion-icon></button>
+     <button ion-fab><ion-icon (click)="sequeToPlayerPage()" name="people"></ion-icon></button>
+     <button ion-fab><ion-icon (click)="sequeToMenuPage()" name="home"></ion-icon></button>
+   </ion-fab-list>
+ 
+ </ion-fab>
+</ion-content>

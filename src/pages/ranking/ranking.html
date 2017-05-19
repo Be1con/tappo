@@ -1,0 +1,66 @@
+<!--
+  Generated template for the Ranking page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+</ion-header>
+
+
+<ion-content padding >
+
+      
+      <div><img src = "../Picture/Winner.png" style="width:200px; height:200px;">
+      </div>
+      <br><br><br>
+      <div> 
+      <table>
+        <tr>
+          <th>Range</th>
+          <th>Score</th>
+        </tr>
+        <tr>
+          <td><b>1</b> Alfreds Futterkiste</td>
+          <td>86</td>
+        </tr>
+        <tr>
+          <td><b>2</b> Centro comercial Moctezuma</td>
+          <td>66</td>
+        </tr>
+        <tr>
+          <td><b>3</b> Ernst Handel</td>
+          <td>56</td>
+        </tr>
+        <tr>
+          <td><b>4</b> Island Trading</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td><b>5</b> Laughing Bacchus Winecellars</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td><b>6</b> Magazzini Alimentari Riuniti</td>
+          <td>43</td>
+        </tr>
+      </table>
+      </div>
+      <ion-fab bottom left >
+        <button ion-fab><ion-icon name="home"></ion-icon></button>
+        <ion-fab-list side="top">
+
+          <button ion-fab><ion-icon (click)="sequeToSettingPage()" name="settings"></ion-icon></button>
+          <button ion-fab><ion-icon (click)="sequeToRulePage()" name="help"></ion-icon></button>
+          <button ion-fab><ion-icon (click)="sequeToRankingPage()" name="ribbon"></ion-icon></button>
+          <button ion-fab><ion-icon (click)="sequeToPlayerPage()" name="people"></ion-icon></button>
+          <button ion-fab><ion-icon (click)="sequeToMenuPage()" name="home"></ion-icon></button>
+        </ion-fab-list>
+        <ion-fab-list side="left">
+          <button ion-fab>Vimeo</button>
+        </ion-fab-list>
+      </ion-fab>
+</ion-content>
+

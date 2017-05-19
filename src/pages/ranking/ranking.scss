@@ -1,0 +1,31 @@
+page-ranking {
+    margin:auto; 
+    display:block;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.winner {
+    background: url(../Picture/winner.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 110%;
+    height: 50%;
+    margin: auto;
+    position: relative;
+}
