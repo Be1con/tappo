@@ -4,7 +4,7 @@ import { SettingPage } from '../setting/setting';
 import { RulePage } from '../rule/rule';
 import { RankingPage } from '../ranking/ranking';
 import { PlayerPage } from '../player/player';
-import {Platform} from 'ionic-angular';
+import { Platform } from 'ionic-angular';
 
   
 /**
@@ -19,23 +19,30 @@ import {Platform} from 'ionic-angular';
   templateUrl: 'menu.html',
 })
 
-export class MenuPage {
-
-  constructor(public navCtrl: NavController) {
-  }
-
-      sequeToSettingPage() {
-      this.navCtrl.push(SettingPage);
-   }
-      sequeToRulePage() {
-      this.navCtrl.push(RulePage);
-   }
-      sequeToRankingPage() {
-      this.navCtrl.push(RankingPage);
-  }
-      sequeToPlayerPage() {
-      this.navCtrl.push(PlayerPage);
-   }
-      
-  
+export class MenuPage
+{
+    constructor(public navCtrl: NavController, private platform: Platform)
+    {
+    }
+    
+    sequeToSettingPage()
+    {
+        this.navCtrl.push(SettingPage);
+    }
+    sequeToRulePage()
+    {
+        this.navCtrl.push(RulePage);
+    }
+    sequeToRankingPage()
+    {
+        this.navCtrl.push(RankingPage);
+    }
+    sequeToPlayerPage()
+    {
+        this.navCtrl.push(PlayerPage);
+    }
+    exitApp()
+    {
+        this.platform.exitApp();
+    }
 }
