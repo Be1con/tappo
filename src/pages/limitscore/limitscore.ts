@@ -17,28 +17,38 @@ import { PlayPage } from '../play/play';
   selector: 'page-limitscore',
   templateUrl: 'limitscore.html',
 })
-export class LimitscorePage {
+export class LimitscorePage
+{
+    public time = [30, 70, 100, 150];
 
-  constructor(public navCtrl: NavController) {
-  }
+    constructor(public navCtrl: NavController){}
 
-   sequeToSettingPage() {
-      this.navCtrl.push(SettingPage);
-   }
-      sequeToRulePage() {
-      this.navCtrl.push(RulePage);
-   }
-      sequeToMenuPage() {
-      this.navCtrl.push(MenuPage);
-  }
-      sequeToPlayerPage() {
-      this.navCtrl.push(PlayerPage);
-   }
-      sequeToRankingPage() {
-      this.navCtrl.push(RankingPage);
-   }
-   sequeToPlayPage() {
-      this.navCtrl.push(PlayPage);
-   }
-
+    getTime(event)
+    {
+        console.log(event);
+    }
+    sequeToSettingPage()
+    {
+        this.navCtrl.push(SettingPage);
+    }
+    sequeToRulePage()
+    {
+        this.navCtrl.push(RulePage);
+    }
+    sequeToMenuPage()
+    {
+        this.navCtrl.push(MenuPage);
+    }
+    sequeToPlayerPage()
+    {
+        this.navCtrl.push(PlayerPage);
+    }
+    sequeToRankingPage()
+    {
+        this.navCtrl.push(RankingPage);
+    }
+    sequeToPlayPage()
+    {
+        this.navCtrl.push(PlayPage);
+    }
 }
