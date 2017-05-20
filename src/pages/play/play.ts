@@ -62,12 +62,6 @@ export class PlayPage
         return this.point;
     }
 
-    result()
-    {
-        var res = document.querySelector('#score').textContent  = number+" "+Gnumber;
-        res;
-    }
-
     save()
     {
         if (this.isNew)
