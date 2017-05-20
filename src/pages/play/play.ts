@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import {TimerComponent} from "../components/timer/timer";
-import { SettingPage } from '../setting/setting';
-import { RulePage } from '../rule/rule';
-import { MenuPage } from '../menu/menu';
-import { RankingPage } from '../ranking/ranking';
-import { RegisterPage } from '../register/register';
 import { ListPage } from '../list/list';
 /**
  * Generated class for the Rule page.
