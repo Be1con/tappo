@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, NgZone } from '@angular/core';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 import { SettingPage } from '../setting/setting';
 import { RulePage } from '../rule/rule';
 import { MenuPage } from '../menu/menu';
@@ -22,7 +22,13 @@ export class RankingPage
     //Variables
     public stand: any = {};
 
-    constructor(public navCtrl: NavController, public navPar: NavParams, private leaderboardService: LeaderboardService) {}
+    constructor(
+      public navCtrl: NavController,
+      public navPar: NavParams,
+      private leaderboardService: LeaderboardService,
+      private platform: Platform,
+      private zone: NgZone
+    ) {}
 
     sequeToSettingPage()
     {
@@ -39,6 +45,21 @@ export class RankingPage
     sequeToPlayerPage()
     {
         this.navCtrl.push(PlayerPage);
+    }
+
+    ionViewDidLoad()
+    {
+        this.platform.ready().then(() => {
+            this.leaderboardService.initDB();
+
+            this.leaderboardService.getAll()
+                .then(data => {
+                    this.zone.run(() => {
+                        this.leaderboardService = data;
+                    });
+                })
+                .catch(console.error.bind(console));
+        });
     }
 
     delete()
