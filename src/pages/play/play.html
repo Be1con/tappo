@@ -4,20 +4,11 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
- 
-
-
 
 <ion-content>
   <div class="player-time">Time: {{ timeLeft }}</div>
-
-
-<div class="player-score" id="score">{{ number }} Times</div>
-
-<button ion-button round large myitem (click)='count()' ng-disabled="!isEnabled">Click!!</button>
-
-<button ion-button round large myitem (click)='result()'>Result</button>
-
-
+  <div class="player-score" id="score">{{ number }} Times</div>
+  <button ion-button round large myitem (click)='count()' ng-disabled="!isEnabled">Click!!</button>
+  <button ion-button round large myitem (click)='result()'>Result</button>
 </ion-content>
 

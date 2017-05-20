@@ -21,6 +21,7 @@ var number=0, Gnumber="Times";
   selector: 'page-play',
   templateUrl: 'play.html',
 })
+
 export class PlayPage
 {
     public timeLeft: number = 30;

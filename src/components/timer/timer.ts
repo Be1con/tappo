@@ -7,16 +7,15 @@ import { Component } from '@angular/core';
  * for more info on Angular Components.
  */
 @Component({
-  selector: 'timer',
-  templateUrl: 'timer.html'
+    selector: 'timer',
+    templateUrl: 'timer.html'
 })
-export class Timer {
-
-  text: string;
-
-  constructor() {
-    console.log('Hello Timer Component');
-    this.text = 'Hello World';
-  }
-
+export class Timer
+{
+    text: string;
+    constructor()
+    {
+        console.log('Hello Timer Component');
+        this.text = 'Hello World';
+    }
 }
