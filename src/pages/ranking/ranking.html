@@ -17,9 +17,9 @@
     
     <ion-content>
         <ion-list inset>
-            <ion-item *ngFor="let birthday of birthdays" (click)="showDetail(birthday)">
-                <div item-left>{{ birthday.Name }}</div>
-                <div item-right>{{ birthday.Date }}</div>
+            <ion-item *ngFor="let stand of leaderboard" (click)="showDetail(stand)">
+                <div item-left>{{ stand.Name }}</div>
+                <div item-right>{{ stand.Date }}</div>
             </ion-item>
         </ion-list>
     </ion-content>
