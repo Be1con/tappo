@@ -7,8 +7,14 @@
 
 <ion-content>
   <div class="player-time">Time: {{ timeLeft }}</div>
-  <div class="player-score" id="score">{{ number }} Times</div>
-  <button ion-button round large myitem (click)='count()' ng-disabled="!isEnabled">Click!!</button>
-  <button ion-button round large myitem (click)='result()'>Result</button>
+  <div class="player-score" id="score">{{ display }} Times</div>
+  <div class="player-score">
+      <button ion-button round large myitem (click)='count()'>Click!!</button>
+      <button ion-button round large myitem (click)='result()'>Result</button>
+  </div>
+
+  <div class="player-score">
+      <button ion-button round large myitem (click)='redirect' style="background-color: red">End Game</button>
+  </div>
 </ion-content>
 

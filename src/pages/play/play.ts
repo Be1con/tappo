@@ -7,7 +7,6 @@ import { MenuPage } from '../menu/menu';
 import { RankingPage } from '../ranking/ranking';
 import { RegisterPage } from '../register/register';
 import { ListPage } from '../list/list';
-import { LeaderboardService } from '../../services/leaderboard.service';
 /**
  * Generated class for the Rule page.
  *
@@ -25,9 +24,9 @@ var number=0, Gnumber="Times";
 export class PlayPage
 {
     public timeLeft: number = 30;
-    constructor(public navCtrl: NavController, public navParams: NavParams, private leaderboardService: LeaderboardService, private viewCtrl: ViewController)
+    constructor(public navCtrl: NavController, public navParams: NavParams, private viewCtrl: ViewController)
     {
-        this.leaderboardService.initDB;
+        var display = this.result;
         var timer = setInterval(() => {
             if(this.timeLeft != 0)
             {
@@ -41,7 +40,7 @@ export class PlayPage
     }
 
     count()
-    {
+    {   
         number++;
         // Gnumber = Gnumber + number;
         console.log(number);
@@ -53,35 +52,8 @@ export class PlayPage
         res;
     }
 
-    public stand: any = {};
-    public isNew = true;
-    public action = 'Add';
-    public point = '';
-
-    save()
+    redirect()
     {
-        if (this.isNew)
-        {
-            this.leaderboardService.add(this.stand).catch(console.error.bind(console));
-        }
-        else
-        {
-            this.leaderboardService.update(this.stand).catch(console.error.bind(console));
-        }
-
-        this.dismiss();
-    }
-
-    delete()
-    {
-        this.leaderboardService.delete(this.stand).catch(console.error.bind(console));
-        this.dismiss();
-    }
-
-    dismiss()
-    {
-        this.viewCtrl.dismiss(this.stand);
+        this.navCtrl.push("./limitscore");
     }
 }
-  
-  
