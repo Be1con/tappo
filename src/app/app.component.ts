@@ -15,6 +15,9 @@ import { SettingPage } from '../pages/setting/setting';
 import { MenuPage } from '../pages/menu/menu';
 import { LimitscorePage } from '../pages/limitscore/limitscore';
 
+import { Timer } from '../components/timer';
+
+import { LeaderboardService } from '../services/leaderboard.service';
 
 @Component({
   templateUrl: 'app.html'
