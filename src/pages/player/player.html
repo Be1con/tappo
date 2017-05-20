@@ -5,37 +5,34 @@
   Ionic pages and navigation.
 -->
 <ion-content padding class="login5">
-  <div class="list">
-
-
-   <br><br><br>
+    <div class="list">
+        <br><br><br>
         <p align="center" style="margin:auto; display:block; font-size: 35px; font-family:Courier New; "><b> Player <ion-icon ios="ios-contacts" md="md-contacts" class="blance"></ion-icon></b></p>
         <br><br>
-
-      <button ion-button large (click)="sequeToRegisterPage()" color="light" clear style="width:155px; height:145px"><img src = "Picture/user1.png"style="align:auto; display:block;width:120px; height:120px;"></button>
-          
-       <button ion-button large (click)="sequeToListPage()" color="light" clear style="width:155px; height:145px"><img src = "Picture/user2.png"style=" align:auto; display:block;width:120px; height:120px;"></button><br> 
-
-       <table style="width:100%;font-size: 20px; font-family:Courier New;">
-          <tr>
-           <th>&nbsp; 1 Player</th>
-           <th>&nbsp; 2 Players</th> 
-          </tr>
-       </table>
-   </div>
+        
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6>
+                    <button ion-button large (click)="sequeToRegisterPage()" color="light" clear style="width:155px; height:150px"><img src = "Picture/user1.png"style="align:auto; display:block;width:120px; height:120px;"></button>
+                    <br>
+                    <p style="text-align:center">1 Player</p>
+                </ion-col>
+                <ion-col col-6>
+                    <button ion-button large (click)="sequeToListPage()" color="light" clear style="width:155px; height:150px"><img src = "Picture/user2.png"style=" align:auto; display:block;width:120px; height:120px;"></button>
+                    <br>
+                    <p style="text-align:center">2 Players</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
    
-   <ion-fab bottom left >
-   <button ion-fab><ion-icon name="home"></ion-icon></button>
-   <ion-fab-list side="top">
-
-     <button ion-fab><ion-icon (click)="sequeToSettingPage()" name="settings"></ion-icon></button>
-     <button ion-fab><ion-icon (click)="sequeToRulePage()" name="help"></ion-icon></button>
-     <button ion-fab><ion-icon (click)="sequeToRankingPage()" name="ribbon"></ion-icon></button>
-    
-     <button ion-fab><ion-icon (click)="sequeToMenuPage()" name="home"></ion-icon></button>
-   </ion-fab-list>
-  
-  </ion-fab>
-
+    <ion-fab bottom left >
+        <button ion-fab><ion-icon name="home"></ion-icon></button>
+        <ion-fab-list side="top">
+            <button ion-fab><ion-icon (click)="sequeToSettingPage()" name="settings"></ion-icon></button>
+            <button ion-fab><ion-icon (click)="sequeToRulePage()" name="help"></ion-icon></button>
+            <button ion-fab><ion-icon (click)="sequeToRankingPage()" name="ribbon"></ion-icon></button>
+            <button ion-fab><ion-icon (click)="sequeToMenuPage()" name="home"></ion-icon></button>
+        </ion-fab-list>
+    </ion-fab>
 </ion-content>
-
