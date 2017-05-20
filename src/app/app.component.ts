@@ -20,7 +20,8 @@ import { Timer } from '../components/timer';
 import { LeaderboardService } from '../services/leaderboard.service';
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+  providers: [LeaderboardService]
 })
 export class MyApp {
 

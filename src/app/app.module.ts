@@ -16,6 +16,8 @@ import { ResultPage } from '../pages/result/result';
 import { SettingPage } from '../pages/setting/setting';
 import { MenuPage } from '../pages/menu/menu';
 import { LimitscorePage } from '../pages/limitscore/limitscore';
+
+import { Timer } from '../components/timer/timer';
 //mport { GamePage } from '../pages/game/game';
 
 @NgModule({
@@ -32,6 +34,7 @@ import { LimitscorePage } from '../pages/limitscore/limitscore';
     SettingPage,
     MenuPage,
     LimitscorePage,
+    Timer
     //GamePage
   ],
   imports: [
@@ -53,12 +56,12 @@ import { LimitscorePage } from '../pages/limitscore/limitscore';
     SettingPage,
     MenuPage,
     LimitscorePage,
-    
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Timer
   ]
 })
 export class AppModule {}
