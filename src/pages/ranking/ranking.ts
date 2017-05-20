@@ -13,8 +13,8 @@ import { LeaderboardService } from '../../services/leaderboard.service';
  */
 @IonicPage()
 @Component({
-  selector: 'page-ranking',
-  templateUrl: 'ranking.html',
+    selector: 'page-ranking',
+    templateUrl: 'ranking.html',
 })
 
 export class RankingPage
@@ -23,11 +23,11 @@ export class RankingPage
     public stand: any = {};
 
     constructor(
-      public navCtrl: NavController,
-      public navPar: NavParams,
-      private leaderboardService: LeaderboardService,
-      private platform: Platform,
-      private zone: NgZone
+        public navCtrl: NavController,
+        public navPar: NavParams,
+        private leaderboardService: LeaderboardService,
+        private platform: Platform,
+        private zone: NgZone
     ) {}
 
     sequeToSettingPage()
