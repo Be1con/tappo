@@ -94,6 +94,9 @@ export class PlayPage
 
     isTimeout()
     {
-        return this.timeLeft;
+        if(this.timeLeft == 0)
+            return true;
+        else
+            return false;
     }
 }
