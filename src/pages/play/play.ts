@@ -24,7 +24,7 @@ export class PlayPage
     public stand: any = {};
     public isNew = true;
     public action = 'Add';
-    public point;
+    public point = 0;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, private leaderboardService: LeaderboardService, private viewCtrl: ViewController)
     {
@@ -36,7 +36,6 @@ export class PlayPage
             }
             else
             {
-                this.point = this.result;
                 this.save;
                 clearInterval(timer);
             }
@@ -45,9 +44,12 @@ export class PlayPage
 
     count()
     {   
-        number++;
-        // Gnumber = Gnumber + number;
-        console.log(number);
+        this.point++;
+    }
+
+    show()
+    {
+        return this.point;
     }
 
     result()
