@@ -13,8 +13,8 @@ var number=0, Gnumber="Times";
 
 @IonicPage()
 @Component({
-  selector: 'page-play',
-  templateUrl: 'play.html',
+    selector: 'page-play',
+    templateUrl: 'play.html',
 })
 
 export class PlayPage
