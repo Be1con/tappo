@@ -17,7 +17,7 @@ import { PlayerPage } from '../player/player';
 })
 export class RankingPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navPar: NavParams) {
   }
 
    sequeToSettingPage() {

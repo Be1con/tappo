@@ -26,6 +26,7 @@ export class PlayPage
     public timeLeft: number = 30;
     constructor(public navCtrl: NavController, public navParams: NavParams, private leaderboardService: LeaderboardService, private viewCtrl: ViewController)
     {
+        this.leaderboardService.initDB;
         var timer = setInterval(() => {
             if(this.timeLeft != 0)
             {
