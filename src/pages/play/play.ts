@@ -89,7 +89,7 @@ export class PlayPage
 
     redirect()
     {
-        this.navCtrl.push(RankingPage);
+        this.navCtrl.push(RankingPage, {});
     }
 
     isTimeout()
