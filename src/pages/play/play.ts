@@ -19,11 +19,16 @@ var number=0, Gnumber="Times";
 
 export class PlayPage
 {
+    //Variables
     public timeLeft: number = 30;
+    public stand: any = {};
+    public isNew = true;
+    public action = 'Add';
+    public point;
+
     constructor(public navCtrl: NavController, public navParams: NavParams, private leaderboardService: LeaderboardService, private viewCtrl: ViewController)
     {
         this.leaderboardService.initDB;
-        var display = this.result;
         var timer = setInterval(() => {
             if(this.timeLeft != 0)
             {
@@ -31,6 +36,8 @@ export class PlayPage
             }
             else
             {
+                this.point = this.result;
+                this.save;
                 clearInterval(timer);
             }
         }, 1000);
@@ -49,11 +56,6 @@ export class PlayPage
         res;
     }
 
-    public stand: any = {};
-    public isNew = true;
-    public action = 'Add';
-    public point = '';
-
     save()
     {
         if (this.isNew)
@@ -65,22 +67,16 @@ export class PlayPage
             this.leaderboardService.update(this.stand).catch(console.error.bind(console));
         }
 
-        this.dismiss();
+        this.redirect;
     }
 
-    delete()
+    back()
     {
-        this.leaderboardService.delete(this.stand).catch(console.error.bind(console));
-        this.dismiss();
-    }
-
-    dismiss()
-    {
-        this.viewCtrl.dismiss(this.stand);
+        this.navCtrl.push("./limitscore");
     }
 
     redirect()
     {
-        this.navCtrl.push("./limitscore");
+        this.navCtrl.push("./ranking");
     }
 }
