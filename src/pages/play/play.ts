@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
-import {TimerComponent} from "../components/timer/timer";
+import { TimerComponent } from "../components/timer/timer";
+
+//Import the Pages
+import { LimitscorePage } from '../limitscore/limitscore';
 import { ListPage } from '../list/list';
+import { RankingPage } from '../ranking/ranking';
+
+//Import Services
 import { LeaderboardService } from '../../services/leaderboard.service';
 /**
  * Generated class for the Rule page.
@@ -74,11 +80,11 @@ export class PlayPage
 
     back()
     {
-        this.navCtrl.push("./limitscore");
+        this.navCtrl.push(LimitscorePage);
     }
 
     redirect()
     {
-        this.navCtrl.push("./ranking");
+        this.navCtrl.push(RankingPage);
     }
 }
