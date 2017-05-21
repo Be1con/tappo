@@ -12,7 +12,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-detail',
   templateUrl: 'detail.html',
 })
-export class Detail {
+export class DetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

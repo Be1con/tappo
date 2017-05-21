@@ -1,9 +1,15 @@
+//Import essential components
 import { Component, NgZone } from '@angular/core';
-import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform, ModalController } from 'ionic-angular';
+
+//Import the pages
 import { SettingPage } from '../setting/setting';
 import { RulePage } from '../rule/rule';
 import { MenuPage } from '../menu/menu';
 import { PlayerPage } from '../player/player';
+import { DetailPage } from '../detail/detail';
+
+//Import service
 import { LeaderboardService } from '../../services/leaderboard.service';
 /**
  * Generated class for the Ranking page.
@@ -27,7 +33,8 @@ export class RankingPage
         public navPar: NavParams,
         private leaderboardService: LeaderboardService,
         private platform: Platform,
-        private zone: NgZone
+        private zone: NgZone,
+        private modalCtrl: ModalController
     ) {}
 
     sequeToSettingPage()
@@ -65,5 +72,11 @@ export class RankingPage
     delete()
     {
         this.leaderboardService.delete(this.stand).catch(console.error.bind(console));
+    }
+
+    showDetail(birthday)
+    {
+        let modal = this.modalCtrl.create(DetailPage, { birthday: birthday });
+        modal.present();
     }
 }

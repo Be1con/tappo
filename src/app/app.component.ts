@@ -14,6 +14,7 @@ import { ResultPage } from '../pages/result/result'
 import { SettingPage } from '../pages/setting/setting';
 import { MenuPage } from '../pages/menu/menu';
 import { LimitscorePage } from '../pages/limitscore/limitscore';
+import { DetailPage } from '../pages/detail/detail';
 
 import { Timer } from '../components/timer';
 

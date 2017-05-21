@@ -16,6 +16,7 @@ import { ResultPage } from '../pages/result/result';
 import { SettingPage } from '../pages/setting/setting';
 import { MenuPage } from '../pages/menu/menu';
 import { LimitscorePage } from '../pages/limitscore/limitscore';
+import { DetailPage } from '../pages/detail/detail';
 
 import { Timer } from '../components/timer/timer';
 //mport { GamePage } from '../pages/game/game';
@@ -34,6 +35,7 @@ import { Timer } from '../components/timer/timer';
     SettingPage,
     MenuPage,
     LimitscorePage,
+    DetailPage,
     Timer
     //GamePage
   ],
@@ -51,11 +53,11 @@ import { Timer } from '../components/timer/timer';
     PlayerPage,
     RankingPage,
     RegisterPage,
-
     ResultPage,
     SettingPage,
     MenuPage,
     LimitscorePage,
+    DetailPage
   ],
   providers: [
     StatusBar,
