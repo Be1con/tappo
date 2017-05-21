@@ -46,6 +46,7 @@ export class PlayPage
             }
             else
             {
+                this.stand = { Name: 'Test', Point: this.point };
                 this.save;
                 clearInterval(timer);
             }

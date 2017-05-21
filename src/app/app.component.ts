@@ -1,8 +1,11 @@
+//Import Essential Components
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Timer } from '../components/timer';
 
+//Import Pages
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { RulePage } from '../pages/rule/rule';
@@ -16,25 +19,25 @@ import { MenuPage } from '../pages/menu/menu';
 import { LimitscorePage } from '../pages/limitscore/limitscore';
 import { DetailPage } from '../pages/detail/detail';
 
-import { Timer } from '../components/timer';
-
+//Import Service
 import { LeaderboardService } from '../services/leaderboard.service';
 
 @Component({
   templateUrl: 'app.html',
   providers: [LeaderboardService]
 })
-export class MyApp {
 
-  rootPage:any = HomePage;
+export class MyApp
+{
+    rootPage:any = HomePage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-    platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide();
-    });
-  }
+    constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen)
+    {
+        platform.ready().then(() => {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            statusBar.styleDefault();
+            splashScreen.hide();
+        });
+    }
 }
-

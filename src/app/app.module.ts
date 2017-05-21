@@ -1,9 +1,12 @@
+//Import Essential Components
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { Timer } from '../components/timer/timer';
 
+//Import Pages
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -17,9 +20,6 @@ import { SettingPage } from '../pages/setting/setting';
 import { MenuPage } from '../pages/menu/menu';
 import { LimitscorePage } from '../pages/limitscore/limitscore';
 import { DetailPage } from '../pages/detail/detail';
-
-import { Timer } from '../components/timer/timer';
-//mport { GamePage } from '../pages/game/game';
 
 @NgModule({
   declarations: [
