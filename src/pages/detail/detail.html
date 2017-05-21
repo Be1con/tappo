@@ -15,7 +15,7 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>  
+<ion-content padding>
     <ion-list>
         <ion-item>
             <ion-label>Name</ion-label>
@@ -23,7 +23,7 @@
         </ion-item>
         <ion-item>
             <ion-label>Score</ion-label>
-            <ion-input text-right type="text" [(ngModel)]="stand.Point"></ion-input>
+            {{ stand.point }}
         </ion-item>
     </ion-list>
     <button ion-button block (click)="save()">Save</button>
