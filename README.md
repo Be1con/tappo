@@ -9,4 +9,4 @@ This is a project for Wireless and Mobile Computing at Faculty of ICT, Mahidol U
 - Supatsara     Sangnapachai  	5688135
 - Ariya 	    Promdeerach 	5688285
 - Thanatorn 	Boonnak 		5788035
-- Kittanan 	    Jamnonkrit 		5788053
+- Kittanan 	    Jamnongrit 		5788053
