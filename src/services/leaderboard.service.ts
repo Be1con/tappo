@@ -44,8 +44,7 @@ export class LeaderboardService
                     });
 
                     // Listen for changes on the database.
-                    this._db.changes({ live: true, since: 'now', include_docs: true})
-                        .on('change', this.onDatabaseChange);
+                    this._db.changes({ live: true, since: 'now', include_docs: true}).on('change', this.onDatabaseChange);
 
                     return this._leaderboard;
                 });
@@ -73,7 +72,8 @@ export class LeaderboardService
             if (stand && stand._id === change.id)
             {
                 this._leaderboard[index] = change.doc; // update
-            } else
+            }
+            else
             {
                 this._leaderboard.splice(index, 0, change.doc) // insert
             }
