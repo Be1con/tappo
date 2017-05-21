@@ -5,7 +5,6 @@ import { TimerComponent } from "../components/timer/timer";
 
 //Import the Pages
 import { LimitscorePage } from '../limitscore/limitscore';
-import { ListPage } from '../list/list';
 import { RankingPage } from '../ranking/ranking';
 
 //Import Services
@@ -17,9 +16,6 @@ import { LeaderboardService } from '../../services/leaderboard.service';
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-
-//Set initial variable
-var number = 0, Gnumber = "Times";
 
 @IonicPage()
 @Component({
