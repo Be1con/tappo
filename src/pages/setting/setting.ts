@@ -1,6 +1,8 @@
+//Import Essential Components
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+//Import Pages
 import { RulePage } from '../rule/rule';
 import { MenuPage } from '../menu/menu';
 import { PlayerPage } from '../player/player';
@@ -18,25 +20,27 @@ import { RankingPage } from '../ranking/ranking';
   templateUrl: 'setting.html',
 })
 
-export class SettingPage {
-
-  constructor(public navCtrl: NavController) {
-  }
-
-   
-      sequeToRulePage() {
-      this.navCtrl.push(RulePage);
-   }
-      sequeToMenuPage() {
-      this.navCtrl.push(MenuPage);
-  }
-      sequeToPlayerPage() {
-      this.navCtrl.push(PlayerPage);
-   }
-      sequeToRankingPage() {
-      this.navCtrl.push(RankingPage);
-   }
-      
+export class SettingPage
+{
+    constructor(public navCtrl: NavController)
+    {
+    } 
+    sequeToRulePage()
+    {
+        this.navCtrl.push(RulePage);
+    }
+    sequeToMenuPage()
+    {
+        this.navCtrl.push(MenuPage);
+    }
+    sequeToPlayerPage()
+    {
+        this.navCtrl.push(PlayerPage);
+    }
+    sequeToRankingPage()
+    {
+        this.navCtrl.push(RankingPage);
+    }  
 }
 
 
