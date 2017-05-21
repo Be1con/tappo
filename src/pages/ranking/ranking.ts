@@ -74,9 +74,9 @@ export class RankingPage
         this.leaderboardService.delete(this.stand).catch(console.error.bind(console));
     }
 
-    showDetail(birthday)
+    showDetail(stand)
     {
-        let modal = this.modalCtrl.create(DetailPage, { birthday: birthday });
+        let modal = this.modalCtrl.create(DetailPage, { stand: stand });
         modal.present();
     }
 }

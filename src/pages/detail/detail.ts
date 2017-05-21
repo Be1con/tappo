@@ -2,6 +2,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
+//Import Page
+import { RankingPage } from '../ranking/ranking';
+
 //Import Service
 import { LeaderboardService } from '../../services/leaderboard.service'
 
@@ -43,6 +46,25 @@ export class DetailPage
             this.isNew = false;
             this.action = 'Edit';
         }
+    }
+
+    save()
+    {
+        if (this.isNew)
+        {
+            this.leaderboardService.add(this.stand).catch(console.error.bind(console));
+        }
+        else
+        {
+            this.leaderboardService.update(this.stand).catch(console.error.bind(console));
+        }
+
+        this.redirect;
+    }
+
+    redirect()
+    {
+        this.viewCtrl.dismiss(RankingPage);
     }
 
     delete()
